@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+}
+:root {
+    --main-color: #FFFFFF;
+    --percent: 3;  /*Процент заполнения диаграммы */
+}
+
+body {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+    color: #fff;
+    text-align: left;
+}
+p {
+    font-weight: 400;
+    line-height: 18px;
+    font-size: 12px;
+}
+h2 {
+    font-weight: 600;
+    line-height: 20px;
+    font-size: 15px;
+
+}
+.checkListContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3579F5;
+    border-radius: 10px;
+    padding: 12px 18px 15px 22px;
+}
+.stats {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0 68px 0 16px;
+}
+.stats_item__p {
+    padding: 0px 10px;
+    background-color: #2364DB;
+    border-radius: 40px;
+    width: fit-content;
+}
+.btn {
+    padding: 10px 25px;
+    border-radius: 6px;
+    border: none;
+    background-color: #F4F8FF;
+    cursor: pointer;
+    transition: all 0.3s;
+    line-height: 20px;
+    font-size: 14px;
+    color: #4777ED;
+    font-family: Inter;
+}
+.btn:hover {
+    scale: 0.98;
+    background-color: #ffffff;
+}
+.chart {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .circle-chart {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+  }
+  
+  .circle-bg {
+    fill: transparent;
+    stroke: #FFFFFF80;
+    stroke-width: 1;
+
+  }
+  
+  .circle {
+    fill: none;
+    stroke-width: 1;
+    transform-origin: center;
+    stroke: var(--main-color);
+    stroke-dasharray: 110;
+    stroke-dashoffset: calc(110 - (var(--percent) / 100 * 110)); 
+  }
+  .percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    line-height: 30px;
+  }
